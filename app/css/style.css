@@ -213,6 +213,9 @@ html, body {
 }
 
 .header__btn {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   display: inline-block;
   padding: 10px 24px;
   background-color: #fff;
@@ -229,6 +232,7 @@ html, body {
   transition: box-shadow .25s, -webkit-box-shadow .25s;
   outline: none;
   cursor: pointer;
+  font-size: inherit;
 }
 
 .header__btn::after {

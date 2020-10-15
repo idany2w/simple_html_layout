@@ -76,6 +76,7 @@
 }
 
 .header__btn{
+    appearance: none;
     display: inline-block;
     padding: 10px 24px;
     background-color: #fff;
@@ -86,6 +87,7 @@
     transition: box-shadow .25s;
     outline: none;
     cursor: pointer;
+    font-size: inherit;
 
     &::after{
         content: none;
@@ -121,7 +123,6 @@
         border-radius: 20px;
     }
 }
-
 
 .header__menu-wrapper{
     @media (max-width: 768px){
