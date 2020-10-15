@@ -1,0 +1,12 @@
+.main-header__title {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 1;
+}
+
+.main-header__description {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1;
+  opacity: .7;
+}

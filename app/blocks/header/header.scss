@@ -4,6 +4,10 @@
     background: blue;
     box-sizing: border-box;
     color: #fff;
+
+    .container{
+        padding:0px;
+    }
 }
 
 .header__inner{
@@ -80,6 +84,8 @@
     border-radius: 20px;
     box-shadow: 0 0 0px 6px rgba(255, 255, 255, 0);
     transition: box-shadow .25s;
+    outline: none;
+    cursor: pointer;
 
     &::after{
         content: none;
