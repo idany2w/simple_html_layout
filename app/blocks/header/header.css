@@ -85,7 +85,7 @@
 }
 
 .header__btn {
-  display: inline-header;
+  display: inline-block;
   padding: 10px 24px;
   background-color: #fff;
   color: blue;
@@ -119,7 +119,7 @@
   .header__burger {
     display: block;
     appearance: none;
-    border: transparent 2px solid;
+    border: #fff 2px solid;
     font-weight: 600;
     font-size: inherit;
   }
