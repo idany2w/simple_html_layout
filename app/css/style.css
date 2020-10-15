@@ -267,6 +267,7 @@ html, body {
 @media (max-width: 768px) {
   .header__btn {
     display: block;
+    width: 100%;
     text-align: center;
   }
 }
