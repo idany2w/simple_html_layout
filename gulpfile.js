@@ -140,6 +140,6 @@ exports.build = build;
 exports.clean_dist = clean_dist;
 
 exports.compile = series(scss_blocks, scss, css, img, js);
-exports.build = series(scss_blocks, scss, css, img, js, build);
+exports.build = series(clean_docs,scss_blocks, scss, css, img, js, build, github_page);
 exports.create_githubpage = series(clean_docs, scss_blocks, scss, css, img, js, github_page);
 exports.default = parallel(clean_dist, scss_blocks, scss, css, img, js, bs, startWatch)
