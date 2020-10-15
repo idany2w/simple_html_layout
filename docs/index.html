@@ -1,11 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css" />
+    <title>gulp</title>
 </head>
+
 <body>
-    <script>document.location.href = document.location.href + "/dist";</script>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo">
+                    <a href="#" class="header__logo-link"><b>Company</b>Logo</a>
+                </div>
+                <div class="header__navigation">
+                    <button class="header__btn header__burger">Меню</button>
+                    <nav class="header__menu-wrapper">
+                        <button class="header__burger header__burger_close">Закрыть</button>
+                        <ul class="header__menu">
+                            <li class="header__menu-item"><a href="" class="header__menu-link">Home</a></li>
+                            <li class="header__menu-item"><a href="" class="header__menu-link">About Us</a></li>
+                            <li class="header__menu-item"><a href="" class="header__menu-link">Services</a></li>
+                            <li class="header__menu-item"><a href="" class="header__menu-link">Contacts</a></li>
+                            <li class="header__menu-item"><button class="header__menu-link header__btn show-popup">Call me</button></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="first">
+        <div class="container">
+            <div class="row align-items-center row_height_100vh">
+                <div class="col">
+                    <div class="main-header">
+                        <h1 class="main-header__title">Main title of page</h1>
+                        <p class="main-header__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores quis, eaque nostrum placeat, voluptates pariatur deserunt neque nihil totam sunt voluptas! Sapiente deserunt aut facere pariatur, doloremque doloribus magnam a?Velit libero dolores consectetur numquam deleniti. Deserunt cum sit harum aspernatur odit est velit explicabo eligendi ipsam consequuntur. Minus saepe ut magni natus tempora mollitia soluta quibusdam animi inventore vitae.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <p>А тут будет форма</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="js/script.min.js"></script>
 </body>
+
 </html>

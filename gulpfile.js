@@ -94,7 +94,23 @@ function build() {
 		}
 	).pipe(dest("dist"));
 }
-function cleanDist() {
+function github_page() {
+	return src(
+		[
+			"app/css/**/*.min.css",
+			"app/js/**/*.min.js",
+			"app/img/dist/**/*",
+			"app/index.html",
+		],
+		{
+			base: "app",
+		}
+	).pipe(dest("docs"));
+}
+function clean_docs() {
+	return del("docs", { force: true });
+}
+function clean_dist() {
 	return del("dist/**/*", { force: true });
 }
 function startWatch() {
@@ -121,8 +137,9 @@ exports.scss_blocks = scss_blocks;
 
 exports.bs = bs;
 exports.build = build;
-exports.cleanDist = cleanDist;
+exports.clean_dist = clean_dist;
 
 exports.compile = series(scss_blocks, scss, css, img, js);
 exports.build = series(scss_blocks, scss, css, img, js, build);
-exports.default = parallel(cleanDist, scss_blocks, scss, css, img, js, bs, startWatch)
+exports.create_githubpage = series(clean_docs, scss_blocks, scss, css, img, js, github_page);
+exports.default = parallel(clean_dist, scss_blocks, scss, css, img, js, bs, startWatch)
