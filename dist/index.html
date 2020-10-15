@@ -43,7 +43,23 @@
                     </div>
                 </div>
                 <div class="col">
-                    <p>А тут будет форма</p>
+                    <div class="form">
+                        <form class="form__inner" action="" method="post">
+                            <fieldset class="form__fieldset">
+                                <legend class="form__fieldset-title">Контактная информация</legend>
+                                <p>
+                                    <label><input type="radio" name="radio" checked="true">Телефон</label>
+                                    <label><input type="radio" name="radio">E-mail</label>
+                                    <label><input type="radio" name="radio">Другое</label>
+                                </p>
+                                <input type="text" name="contact-fild" placeholder="+7 (999) 999-99-99">
+                            </fieldset>
+                            <fieldset class="form__fieldset">
+                                <legend class="form__fieldset-title">Описание проекта</legend>
+                                <p><textarea name="project-description" cols="30" rows="10">Описание...</textarea></p>
+                            </fieldset>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

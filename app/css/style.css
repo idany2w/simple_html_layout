@@ -45,19 +45,19 @@
 }
 
 .row_height_100vh {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .row_height_75vh {
-  height: 75vh;
+  min-height: 75vh;
 }
 
 .row_height_50vh {
-  height: 50vh;
+  min-height: 50vh;
 }
 
 .row_height_25vh {
-  height: 25vh;
+  min-height: 25vh;
 }
 
 [class^="col"] {
@@ -79,6 +79,20 @@
   max-width: 100%;
 }
 
+@media (max-width: 600px) {
+  .col {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+       -moz-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    width: 100%;
+  }
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -95,6 +109,12 @@ html, body {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.form {
+  padding: 20px;
+  border: blue 2px solid;
+  border-radius: 20px;
 }
 
 .header {

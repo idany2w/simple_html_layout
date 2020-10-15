@@ -22,16 +22,16 @@
         align-items: flex-end!important;
     }
     &_height_100vh{
-        height: 100vh;
+        min-height: 100vh;
     }
     &_height_75vh{
-        height: 75vh;
+        min-height: 75vh;
     }
     &_height_50vh{
-        height: 50vh;
+        min-height: 50vh;
     }
     &_height_25vh{
-        height: 25vh;
+        min-height: 25vh;
     }
 }
 
@@ -54,5 +54,11 @@
 @media (max-width: 1024px){}
 @media (max-width: 989px){}
 @media (max-width: 768px){}
-@media (max-width: 600px){}
+@media (max-width: 600px){
+    .col{
+        flex-basis: 100%;
+        flex-grow: 0;
+        width: 100%;
+    }
+}
 @media (max-width: 320px){}
