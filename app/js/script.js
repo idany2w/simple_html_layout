@@ -1,3 +1,4 @@
+
 document.addEventListener('click', function(e){
     const btn = e.target.closest('.header__burger');
     
@@ -17,4 +18,3 @@ document.addEventListener('click', function(e){
     e.preventDefault()
     alert("popup!")
 });
-

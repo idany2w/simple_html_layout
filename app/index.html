@@ -33,37 +33,49 @@
         </div>
     </header>
 
-    <section id="first">
+    <section class="first">
         <div class="container">
-            <div class="row align-items-center row_height_100vh">
-                <div class="col">
+            <div class="first__row row align-items-center row_height_100vh">
+                <div class="col col_space-after_20">
                     <div class="main-header">
                         <h1 class="main-header__title">Main title of page</h1>
-                        <p class="main-header__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores quis, eaque nostrum placeat, voluptates pariatur deserunt neque nihil totam sunt voluptas! Sapiente deserunt aut facere pariatur, doloremque doloribus magnam a?Velit libero dolores consectetur numquam deleniti. Deserunt cum sit harum aspernatur odit est velit explicabo eligendi ipsam consequuntur. Minus saepe ut magni natus tempora mollitia soluta quibusdam animi inventore vitae.</p>
+                        <p class="main-header__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores quis, eaque nostrum placeat, voluptates pariatur deserunt neque nihil totam sunt voluptas! Sapiente deserunt aut facere pariatur, doloremque doloribus magnam a.</p>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col col_space-after_20">
                     <div class="form">
                         <form class="form__inner" action="" method="post">
+                            <h3 class="form__main-title">Оставьте заявку</h3>
                             <fieldset class="form__fieldset">
                                 <legend class="form__fieldset-title">Контактная информация</legend>
-                                <p>
-                                    <label><input type="radio" name="radio" checked="true">Телефон</label>
-                                    <label><input type="radio" name="radio">E-mail</label>
-                                    <label><input type="radio" name="radio">Другое</label>
-                                </p>
-                                <input type="text" name="contact-fild" placeholder="+7 (999) 999-99-99">
+                                <div class="form__elements-group">
+                                    <label class="form__radio"><input type="radio" name="radio" checked="true">Телефон</label>
+                                    <label class="form__radio"><input type="radio" name="radio">E-mail</label>
+                                    <label class="form__radio"><input type="radio" name="radio">Другое</label>
+                                </div>
+                                <input class="form__input-text" type="text" name="contact-fild" placeholder="Введите информацию в это поле...">
                             </fieldset>
                             <fieldset class="form__fieldset">
                                 <legend class="form__fieldset-title">Описание проекта</legend>
-                                <p><textarea name="project-description" cols="30" rows="10">Описание...</textarea></p>
+                                <p><textarea class="form__textarea" name="project-description" placeholder="Описание..." cols="30" rows="10"></textarea></p>
                             </fieldset>
+                            <input class="form__submit" type="submit" value="Отправить">
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <span class="footer__info">© 2002–2020 Все права защищены, но не очень сильно</span>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
     <script src="js/script.min.js"></script>

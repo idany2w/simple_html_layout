@@ -4,6 +4,11 @@
     background: blue;
     box-sizing: border-box;
     color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 3000;
 
     .container{
         padding:0px;
@@ -134,15 +139,17 @@
         top: 0;
         bottom: 0;
         opacity: 0;
+        visibility: hidden;
         background-color: blue;
         overflow-y: scroll;
-        transition: opacity .25s, z-index .25s 0s;
+        transition: opacity .25s, z-index .25s 0s, visibility .25s 0s;
 
         padding: 20px;
 
         &.header__menu-wrapper_show{
             z-index: 10000;
             opacity: 1;
+            visibility: visible;
         }
     }
 }

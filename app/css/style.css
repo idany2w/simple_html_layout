@@ -1,3 +1,7 @@
+section {
+  overflow-x: hidden;
+}
+
 .container {
   max-width: 1300px;
   width: 100%;
@@ -79,6 +83,10 @@
   max-width: 100%;
 }
 
+.col_space-after_20 {
+  margin-bottom: 20px;
+}
+
 @media (max-width: 600px) {
   .col {
     -webkit-flex-basis: 100%;
@@ -109,12 +117,147 @@ html, body {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
+  outline: none;
+}
+
+.first__row {
+  padding-top: 84px;
+}
+
+.footer {
+  background-color: blue;
+  padding: 20px 0px;
+}
+
+.footer__info {
+  color: #fff;
 }
 
 .form {
   padding: 20px;
   border: blue 2px solid;
   border-radius: 20px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .form {
+    font-size: 14px;
+  }
+}
+
+.form__main-title {
+  margin: 0 0 20px 0;
+  font-size: 24px;
+}
+
+.form__fieldset {
+  margin-bottom: 20px;
+  border: blue 2px solid;
+  border-radius: 16px;
+  padding: 12px 24px;
+}
+
+@media (max-width: 768px) {
+  .form__fieldset {
+    padding: 8px 16px;
+  }
+}
+
+.form__fieldset-title {
+  font-weight: bold;
+  color: blue;
+}
+
+.form__elements-group {
+  margin-bottom: 20px;
+}
+
+.form__input-text {
+  display: block;
+  width: 100%;
+  border: blue 2px solid;
+  border-radius: 10px;
+  line-height: 2;
+  padding: 0px 10px;
+  outline: none;
+  margin-bottom: 20px;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.form__textarea {
+  display: block;
+  width: 100%;
+  border: blue 2px solid;
+  border-radius: 10px;
+  padding: 10px;
+  line-height: 1;
+  outline: none;
+  resize: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+@media (max-width: 768px) {
+  .form__radio {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .form__radio > input[type="radio"] {
+    margin: 0 10px 0 0;
+  }
+}
+
+.form__submit {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: block;
+  padding: 10px 24px;
+  background-color: blue;
+  color: #fff;
+  border: transparent 2px solid;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 0px 6px rgba(0, 0, 255, 0);
+          box-shadow: 0 0 0px 6px rgba(0, 0, 255, 0);
+  -webkit-transition: -webkit-box-shadow .25s;
+  transition: -webkit-box-shadow .25s;
+  -o-transition: box-shadow .25s;
+  -moz-transition: box-shadow .25s;
+  transition: box-shadow .25s;
+  transition: box-shadow .25s, -webkit-box-shadow .25s;
+  outline: none;
+  cursor: pointer;
+  font-size: inherit;
+  margin-left: auto;
+}
+
+.form__submit::after {
+  content: none;
+}
+
+.form__submit:hover {
+  -webkit-box-shadow: 0 0 0px 6px rgba(0, 0, 255, 0.4);
+          box-shadow: 0 0 0px 6px rgba(0, 0, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+  .form__submit {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .header {
@@ -125,6 +268,11 @@ html, body {
      -moz-box-sizing: border-box;
           box-sizing: border-box;
   color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 3000;
 }
 
 .header .container {
@@ -306,17 +454,19 @@ html, body {
     top: 0;
     bottom: 0;
     opacity: 0;
+    visibility: hidden;
     background-color: blue;
     overflow-y: scroll;
-    -webkit-transition: opacity .25s, z-index .25s 0s;
-    -o-transition: opacity .25s, z-index .25s 0s;
-    -moz-transition: opacity .25s, z-index .25s 0s;
-    transition: opacity .25s, z-index .25s 0s;
+    -webkit-transition: opacity .25s, z-index .25s 0s, visibility .25s 0s;
+    -o-transition: opacity .25s, z-index .25s 0s, visibility .25s 0s;
+    -moz-transition: opacity .25s, z-index .25s 0s, visibility .25s 0s;
+    transition: opacity .25s, z-index .25s 0s, visibility .25s 0s;
     padding: 20px;
   }
   .header__menu-wrapper.header__menu-wrapper_show {
     z-index: 10000;
     opacity: 1;
+    visibility: visible;
   }
 }
 

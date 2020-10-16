@@ -2,4 +2,100 @@
     padding: 20px;
     border: blue 2px solid;
     border-radius: 20px;
+    font-size: 16px;
+    @media (max-width: 768px){
+        font-size: 14px;
+    }
+}
+
+.form__main-title{
+    margin: 0 0 20px 0;
+    font-size: 24px;
+}
+
+.form__fieldset{
+    margin-bottom: 20px;
+    border: blue 2px solid;
+    border-radius: 16px;
+    padding: 12px 24px;
+    @media (max-width: 768px){
+        padding: 8px 16px;
+    }
+}
+
+.form__fieldset-title{
+    font-weight: bold;
+    color: blue;
+}
+
+.form__elements-group{
+    margin-bottom: 20px;
+}
+
+.form__input-text{
+    display: block;
+    width: 100%;
+    border: blue 2px solid;
+    border-radius: 10px;
+    line-height: 2;
+    padding: 0px 10px;
+    outline: none;
+    margin-bottom: 20px;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.form__textarea{
+    display: block;
+    width: 100%;
+    border: blue 2px solid;
+    border-radius: 10px;
+    padding: 10px;
+    line-height: 1;
+    outline: none;
+    resize: none;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.form__radio{
+    @media (max-width: 768px){
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+
+        &>input[type="radio"]{
+            margin: 0 10px 0 0;
+        }
+    }
+}
+
+.form__submit{
+    appearance: none;
+    display: block;
+    padding: 10px 24px;
+    background-color: blue;
+    color: #fff;
+    border: transparent 2px solid;
+    border-radius: 20px;
+    box-shadow: 0 0 0px 6px rgba(0, 0, 255, 0);
+    transition: box-shadow .25s;
+    outline: none;
+    cursor: pointer;
+    font-size: inherit;
+    margin-left: auto;
+
+    &::after{
+        content: none;
+    }
+    &:hover{
+        box-shadow: 0 0 0px 6px rgba(0, 0, 255, 0.4);
+    }
+
+    @media (max-width: 768px){
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
 }
